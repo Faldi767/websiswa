@@ -50,4 +50,11 @@ class SiswaController extends Controller
         $siswa->save();
         return redirect('/siswa');
     }
+
+    public function delete($id)
+    {
+        $siswa = Siswa::find($id);
+        $siswa->delete();
+        return redirect('/siswa');
+    }
 }

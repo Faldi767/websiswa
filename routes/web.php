@@ -20,3 +20,4 @@ Route::get('/siswa/tambah', 'SiswaController@tambah');
 Route::post('/siswa/store', 'SiswaController@store');
 Route::get('/siswa/edit/{id}', 'SiswaController@edit');
 Route::put('/siswa/update/{id}', 'SiswaController@update');
+Route::get('/siswa/hapus/{id}', 'SiswaController@delete');
