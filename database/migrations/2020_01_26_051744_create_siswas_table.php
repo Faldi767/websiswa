@@ -18,6 +18,7 @@ class CreateSiswasTable extends Migration
             $table->string('nama');
             $table->text('alamat');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

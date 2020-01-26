@@ -57,4 +57,40 @@ class SiswaController extends Controller
         $siswa->delete();
         return redirect('/siswa');
     }
+
+    public function trash()
+    {
+        // mengampil data guru yang sudah dihapus
+        $siswa = Siswa::onlyTrashed()->get();
+        return view('siswa_trash', ['siswa' => $siswa]);
+    }
+
+    public function kembalikan($id)
+    {
+        $siswa = Siswa::onlyTrashed()->where('id',$id);
+        $siswa->restore();
+        return redirect('/siswa/trash');
+    }
+
+    public function kembalikan_semua()
+    {
+                
+        $siswa = Siswa::onlyTrashed();
+        $siswa->restore();
+        return redirect('/siswa/trash');
+    }
+
+    public function hapuspermanen($id)
+    {
+        $siswa = Siswa::onlyTrashed()->where('id',$id);
+        $siswa->forceDelete();
+        return redirect('/siswa/trash');
+    }
+
+    public function hapuspermanen_semua()
+    {
+        $siswa = Siswa::onlyTrashed();
+        $siswa->forceDelete();
+        return redirect('/siswa/trash');
+    }
 }

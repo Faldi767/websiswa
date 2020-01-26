@@ -21,3 +21,8 @@ Route::post('/siswa/store', 'SiswaController@store');
 Route::get('/siswa/edit/{id}', 'SiswaController@edit');
 Route::put('/siswa/update/{id}', 'SiswaController@update');
 Route::get('/siswa/hapus/{id}', 'SiswaController@delete');
+Route::get('/siswa/trash', 'SiswaController@trash');
+Route::get('/siswa/kembalikan/{id}', 'SiswaController@kembalikan');
+Route::get('/siswa/kembalikan_semua', 'SiswaController@kembalikan_semua');
+Route::get('/siswa/hapuspermanen/{id}', 'SiswaController@hapuspermanen');
+Route::get('/siswa/hapuspermanen_semua', 'SiswaController@hapuspermanen_semua');
