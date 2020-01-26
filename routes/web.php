@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/siswa', 'SiswaController@index');
+Route::get('/siswa/tambah', 'SiswaController@tambah');
+Route::post('/siswa/store', 'SiswaController@store');
