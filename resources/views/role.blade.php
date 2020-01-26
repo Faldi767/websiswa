@@ -21,6 +21,8 @@
                         <thead>
                             <tr>
                                 <th>Nama Role</th>
+                                <th>Nama</th>
+                                <th>Jumlah</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
@@ -28,6 +30,14 @@
                             @foreach($role as $r)
                             <tr>
                                 <td>{{ $r->nama_role }}</td>
+                                <td>
+                                    @foreach($r->siswa as $s)
+                                        {{ $s->nama }},
+                                    @endforeach
+                                </td>
+                                <td>
+                                    {{ $r->siswa->count() }}
+                                </td>
                                 <td>
                                     <a href="/role/edit/{{ $r->id_role }}" class="btn btn-warning">Edit</a>
                                     <a href="/role/hapus/{{ $r->id_role }}" class="btn btn-danger">Hapus</a>
