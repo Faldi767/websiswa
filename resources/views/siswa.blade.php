@@ -30,8 +30,8 @@
                                 <td>{{ $s->nama }}</td>
                                 <td>{{ $s->alamat }}</td>
                                 <td>
-                                    <a href="/pegawai/edit/{{ $s->id }}" class="btn btn-warning">Edit</a>
-                                    <a href="/pegawai/hapus/{{ $s->id }}" class="btn btn-danger">Hapus</a>
+                                    <a href="/siswa/edit/{{ $s->id }}" class="btn btn-warning">Edit</a>
+                                    <a href="/siswa/hapus/{{ $s->id }}" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach
