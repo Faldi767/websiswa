@@ -15,13 +15,15 @@ class CreateSiswasTable extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('role')->onDelete('cascade');
             $table->string('nama');
             $table->text('alamat');
             $table->timestamps();
             $table->softDeletes();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

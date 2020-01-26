@@ -10,31 +10,27 @@
         <div class="container">
             <div class="card mt-5">
                 <div class="card-header text-center">
-                    CRUD Data Siswa
+                    CRUD Data Role
                 </div>
                 <div class="card-body">
-                    <a href="/siswa/tambah" class="btn btn-primary">Input Siswa Baru</a>
-                    <a href="/siswa/trash" class="btn btn-primary">Tong Sampah</a>
+                    <a href="/role/tambah" class="btn btn-primary">Input Role Baru</a>
+                    <a href="/role/trash" class="btn btn-primary">Tong Sampah</a>
                     <br/>
                     <br/>
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Role</th>
+                                <th>Nama Role</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($siswa as $s)
+                            @foreach($role as $r)
                             <tr>
-                                <td>{{ $s->nama }}</td>
-                                <td>{{ $s->alamat }}</td>
-                                <td>{{ $s->role->nama_role }}</td>
+                                <td>{{ $r->nama_role }}</td>
                                 <td>
-                                    <a href="/siswa/edit/{{ $s->id_siswa }}" class="btn btn-warning">Edit</a>
-                                    <a href="/siswa/hapus/{{ $s->id_siswa }}" class="btn btn-danger">Hapus</a>
+                                    <a href="/role/edit/{{ $r->id_role }}" class="btn btn-warning">Edit</a>
+                                    <a href="/role/hapus/{{ $r->id_role }}" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach

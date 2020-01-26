@@ -5,15 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Siswa extends Model
+class Role extends Model
 {
     use SoftDeletes;
-    protected $table = "siswa";
+    protected $table = "role";
     protected $dates = ['deleted_at'];
 
-    protected $fillable = ['nama', 'alamat'];
-
-    public function role() {
-        return $this->belongsTo('App\Role');
+    public function siswa() {
+        return $this->hasOne('App\Siswa');
     }
 }
