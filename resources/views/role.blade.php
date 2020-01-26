@@ -27,16 +27,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($role as $r)
+                            @foreach($siswa as $s)
                             <tr>
-                                <td>{{ $r->nama_role }}</td>
+                                <td>{{ $s->nama }}</td>
                                 <td>
-                                    @foreach($r->siswa as $s)
-                                        {{ $s->nama }},
+                                    @foreach($s->role as $r)
+                                        {{ $r->nama_role }},
                                     @endforeach
                                 </td>
                                 <td>
-                                    {{ $r->siswa->count() }}
+                                    {{ $s->role->count() }}
                                 </td>
                                 <td>
                                     <a href="/role/edit/{{ $r->id_role }}" class="btn btn-warning">Edit</a>

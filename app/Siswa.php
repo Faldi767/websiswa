@@ -14,6 +14,6 @@ class Siswa extends Model
     protected $fillable = ['nama', 'alamat'];
 
     public function role() {
-        return $this->belongsTo('App\Role');
+        return $this->belongsToMany('App\Role');
     }
 }

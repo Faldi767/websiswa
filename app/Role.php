@@ -12,6 +12,6 @@ class Role extends Model
     protected $dates = ['deleted_at'];
 
     public function siswa() {
-        return $this->hasMany('App\Siswa');
+        return $this->belongsToMany('App\Siswa');
     }
 }

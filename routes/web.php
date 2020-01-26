@@ -27,3 +27,4 @@ Route::get('/siswa/kembalikan_semua', 'SiswaController@kembalikan_semua');
 Route::get('/siswa/hapuspermanen/{id}', 'SiswaController@hapuspermanen');
 Route::get('/siswa/hapuspermanen_semua', 'SiswaController@hapuspermanen_semua');
 Route::get('/role', 'RoleController@index');
+Route::get('/rolesiswa', 'RoleSiswaController@index');
